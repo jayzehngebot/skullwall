@@ -1,0 +1,58 @@
+html
+{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bgTile02.png);
+	background-color: #4C4C4C;
+	background-repeat: repeat;
+}
+
+body {
+	width: 98%;
+	font-family: 'VT323', cursive;
+	color: #B3B3B3;
+}
+
+#header {
+	width: 100%;
+	margin-right: 30px;
+}
+
+h1 {
+	text-align: right;
+	opacity:.3; 
+	font-size: 90px;
+	font-weight: 10px;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: #E6E6E6;
+}
+
+#skullwall {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	
+}
+
+ul {
+	display: inline-block;
+	list-style: none;
+	 text-indent: 90px;
+	 bottom: 30px;
+}
+
+li {
+ display: inline;
+
+}
+
+.skull {
+	height: 180px;
+	width: 180px;
+	padding-bottom: 90px;
+}
+ 
+/*
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Cinzel', serif;
+*/
