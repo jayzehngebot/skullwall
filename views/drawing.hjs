@@ -5,12 +5,12 @@
 	<title>Simplify</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<script type="text/javascript" src="javascripts/paper.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 	<script type="text/paperscript" canvas="canvas">
 		var path;
 
-		var textItem = new PointText(new Point(20, 30));
-		textItem.fillColor = 'black';
-		textItem.content = 'Click and drag to draw a line.';
+
 
 		function onMouseDown(event) {
 			// If we produced a path before, deselect it:
@@ -21,7 +21,8 @@
 			// Create a new path and set its stroke color to black:
 			path = new Path();
 			path.add(event.point);
-			path.strokeColor = 'black';
+			path.strokeColor = '#FFFFF0';
+			path.strokeWidth = '7'
 
 			// Select the path, so we can see its segment points:
 			path.fullySelected = true;
@@ -32,14 +33,10 @@
 		function onMouseDrag(event) {
 			path.add(event.point);
 
-			// Update the content of the text item to show how many
-			// segments it has:
-			textItem.content = 'Segment count: ' + path.segments.length;
 		}
 
 		// When the mouse is released, we simplify the path:
 		function onMouseUp(event) {
-			var segmentCount = path.segments.length;
 
 			// When the mouse is released, simplify it:
 			path.simplify(10);
@@ -47,15 +44,13 @@
 			// Select the path, so we can see its segments:
 			path.fullySelected = true;
 
-			var newSegmentCount = path.segments.length;
-			var difference = segmentCount - newSegmentCount;
-			var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
-			textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
-
 		}
 	</script>
 </head>
 <body>
-	<canvas id="canvas" resize></canvas>
+	<p>DRAW A BIG SKULL. Soon You Will Be Able to Save</p>
+	
+		<canvas id="canvas" resize></canvas>
+	
 </body>
 </html>

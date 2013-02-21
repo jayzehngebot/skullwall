@@ -10,3 +10,7 @@ exports.index = function(req, res){
 exports.drawing = function(req, res){
   res.render('drawing', { title: 'SkullwallDraw' });
 };
+
+exports.inspired = function(req, res){
+  res.render('inspired', { title: 'Inspired' });
+};

@@ -28,6 +28,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/inspired', routes.inspired);
 app.get('/drawing', routes.drawing);
 app.get('/users', user.list);
 
