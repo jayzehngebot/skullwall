@@ -12,5 +12,5 @@ exports.drawing = function(req, res){
 };
 
 exports.inspired = function(req, res){
-  res.render('inspired', { title: 'Inspired' });
+  res.render('inspired', { title: 'Be Patient' });
 };
