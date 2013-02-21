@@ -1,0 +1,19 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node web"
+  },
+  "dependencies": {
+    "express": "3.1.0",
+    "hjs": "0.0.4"
+  },
+    "engines" : {
+    "node" : "0.8.x",
+    "npm" : "1.1.x"
+  },
+  "devDependencies": {
+    "nodemon" : "0.7.2"
+  }
+}
